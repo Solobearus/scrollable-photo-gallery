@@ -11,7 +11,7 @@ function firstReducer(state = initialState, action) {
 
     switch (action.type) {
         case EXAMPLE_ACTION:
-            newChange = state.change;
+            const newChange = state.change;
             console.log(`Reducer: some change was made to state.change`);
             return {...state, change : newChange};
 

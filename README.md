@@ -15,4 +15,4 @@
 - Added: src\Redux\reducers.js
 - Added: src\Redux\actions.js
 - Added: src\Redux\store.js
-- Changed: 
+- Changed: moved src\App.js to src\Components\App\App.jsx
