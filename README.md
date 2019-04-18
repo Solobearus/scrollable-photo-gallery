@@ -1,4 +1,4 @@
-## React Redux Matirial-ui Boilerplate
+## React Redux Boilerplate
 
 ### This boiler plate was made with :
 
