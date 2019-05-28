@@ -1,23 +1,48 @@
 
 import {
-    EXAMPLE_ACTION,
+    LOAD_PHOTOS,
+    UPDATE_PHOTOS,
+    OPEN_MODAL,
+    CLOSE_MODAL,
+    NEXT_PHOTO,
+    PREV_PHOTO,
 } from './actions'
 
 const initialState = {
-    change : null
+    photos: [],
+    page: 1,
+    currentImg: null,
+    ShowModal: false,
 };
 
-function firstReducer(state = initialState, action) {
+function mainReducer(state = initialState, action) {
 
     switch (action.type) {
-        case EXAMPLE_ACTION:
-            const newChange = state.change;
-            console.log(`Reducer: some change was made to state.change`);
-            return {...state, change : newChange};
+
+        case LOAD_PHOTOS:
+            let updatedPhotos = [...state.photos];
+            updatedPhotos.push(...action.payload);
+            return { ...state, photos: updatedPhotos, page: ++state.page };
+
+        case OPEN_MODAL:
+            return {
+                ...state,
+                currentImg: action.payload,
+                ShowModal: true
+            };
+
+        case CLOSE_MODAL:
+            return { ...state, ShowModal: false };
+
+        case NEXT_PHOTO:
+            return { ...state, currentImg: ++state.currentImg };
+
+        case PREV_PHOTO:
+            return { ...state, currentImg: --state.currentImg };
 
         default:
             return state
     }
 }
 
-export default firstReducer
+export default mainReducer

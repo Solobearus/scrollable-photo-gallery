@@ -1,0 +1,10 @@
+.Gallery {
+  display: grid;
+  gap: 20px; }
+  .Gallery .InfiniteScroll {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px; }
+
+/*# sourceMappingURL=Gallery.module.css.map */

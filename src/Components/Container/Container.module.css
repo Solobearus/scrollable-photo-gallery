@@ -1,0 +1,7 @@
+.Container {
+  display: grid;
+  justify-self: center;
+  gap: 20px;
+  width: 1000px; }
+
+/*# sourceMappingURL=Container.module.css.map */

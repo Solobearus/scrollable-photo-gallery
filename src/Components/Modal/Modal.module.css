@@ -1,0 +1,23 @@
+.Modal {
+  z-index: 0;
+  /* Sit on top */
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 0.2fr 0.6fr 0.2fr;
+  left: 0px;
+  right: 0px;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */ }
+  .Modal img {
+    z-index: 1;
+    /* Sit on top */ }
+  .Modal .display {
+    display: block; }
+  .Modal .displayNone {
+    display: none; }
+
+/*# sourceMappingURL=Modal.module.css.map */
