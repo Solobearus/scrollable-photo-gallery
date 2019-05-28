@@ -43,7 +43,7 @@ const Modal = (props) => {
                         }}
                         alt='couldnt load'>
                     </img>
-                    : null}
+                    : <div></div>}
                 <div>
                     <img
                         className={spinner_classes}
@@ -69,7 +69,7 @@ const Modal = (props) => {
                             }}
                             alt='couldnt load'>
                         </img>
-                        : null
+                        : <div></div>
                 }
             </div >
         </React.Fragment>
