@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import style from './Modal.module.css'
 import { connect } from 'react-redux'
 import { prev_photo, next_photo, close_modal } from '../../Redux/actions'
-import LazyLoad from 'react-lazy-load';
 import spinner from '../../Images/spinner.svg';
 
 const Modal = (props) => {
 
     const [loaded, setloaded] = useState(false);
-    
+
     const createUrl = (photo, size = "q") => {
 
         const farmid = photo.farm;
@@ -51,16 +50,14 @@ const Modal = (props) => {
                         src={spinner}
                         alt='spinner'>
                     </img>
-                    <LazyLoad>
-                        <img
-                            className={current_classes}
-                            src={createUrl(props.photos[props.currentImg], "c")}
-                            onLoad={() => {
-                                setloaded(true);
-                            }}
-                            alt='couldnt load'>
-                        </img>
-                    </LazyLoad>
+                    <img
+                        className={current_classes}
+                        src={createUrl(props.photos[props.currentImg], "z")}
+                        onLoad={() => {
+                            setloaded(true);
+                        }}
+                        alt='couldnt load'>
+                    </img>
                 </div>
                 {
                     props.currentImg < props.photos.length - 1 ?

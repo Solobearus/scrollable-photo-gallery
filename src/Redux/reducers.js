@@ -1,7 +1,6 @@
 
 import {
     LOAD_PHOTOS,
-    UPDATE_PHOTOS,
     OPEN_MODAL,
     CLOSE_MODAL,
     NEXT_PHOTO,
