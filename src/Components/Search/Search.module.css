@@ -1,0 +1,26 @@
+.Search {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-image: linear-gradient(white, rgba(255, 255, 255, 0.01)); }
+  .Search * {
+    margin: 20px;
+    padding: 5px;
+    border-width: 1.5px;
+    border-radius: 10px;
+    border-color: black;
+    background-color: white; }
+  .Search button:hover {
+    background-color: #f0f0f0;
+    cursor: pointer; }
+  .Search button:active {
+    background-color: #d2d2d2; }
+  .Search input:focus {
+    background-color: #f0f0f0; }
+  .Search *:focus {
+    outline: none; }
+
+/*# sourceMappingURL=Search.module.css.map */

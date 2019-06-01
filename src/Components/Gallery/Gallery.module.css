@@ -4,7 +4,7 @@
   .Gallery .InfiniteScroll {
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 150px);
     gap: 10px; }
 
 /*# sourceMappingURL=Gallery.module.css.map */

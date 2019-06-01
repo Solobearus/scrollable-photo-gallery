@@ -5,11 +5,11 @@ import { fetchPhotos, open_modal } from '../../Redux/actions'
 // import Photo from '../Photo/Photo.jsx'
 import InfiniteScroll from "react-infinite-scroll-component";
 import Modal from '../Modal/Modal';
+import Search from '../Search/Search';
 
 const Gallery = (props) => {
 
     useEffect(() => {
-        props.fetchPhotos(props.page);
     }, [])
 
     const createUrl = (photo) => {
@@ -25,12 +25,13 @@ const Gallery = (props) => {
     return (
         <div className={style.Gallery}>
 
+            <Search></Search>
             {props.ShowModal ? <Modal></Modal> : null}
 
             <InfiniteScroll
                 className={style.InfiniteScroll}
                 dataLength={props.photos.length}
-                next={() => { props.fetchPhotos(props.page) }}
+                next={() => { props.fetchPhotos({page: props.page, tags :props.searchTag}) }}
                 hasMore={true}
                 loader={<h4>Loading...</h4>}
             >
@@ -48,6 +49,7 @@ const Gallery = (props) => {
 }
 
 const mapStateToProps = state => ({
+    searchTag: state.mainReducer.searchTag,
     photos: state.mainReducer.photos,
     ShowModal: state.mainReducer.ShowModal,
     page: state.mainReducer.page,

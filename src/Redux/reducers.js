@@ -8,6 +8,7 @@ import {
 } from './actions'
 
 const initialState = {
+    searchTag: null,
     photos: [],
     page: 1,
     currentImg: null,
@@ -19,9 +20,15 @@ function mainReducer(state = initialState, action) {
     switch (action.type) {
 
         case LOAD_PHOTOS:
-            let updatedPhotos = [...state.photos];
-            updatedPhotos.push(...action.payload);
-            return { ...state, photos: updatedPhotos, page: ++state.page };
+
+            let updatedPhotos = action.payload.page === 1 ? [] : [...state.photos];
+            updatedPhotos.push(...action.payload.photos);
+            return {
+                ...state,
+                searchTag: action.payload.tags,
+                photos: updatedPhotos,
+                page: ++action.payload.page
+            };
 
         case OPEN_MODAL:
             return {

@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,QAAS;EACP,OAAO,EAAE,IAAI;EACb,GAAG,EAAE,IAAI;EACT,wBAAgB;IACd,OAAO,EAAE,IAAI;IACb,aAAa,EAAE,MAAM;IACrB,qBAAqB,EAAE,cAAa;IACpC,GAAG,EAAE,IAAI",
+"mappings": "AAAA,QAAS;EACP,OAAO,EAAE,IAAI;EACb,GAAG,EAAE,IAAI;EACT,wBAAgB;IACd,OAAO,EAAE,IAAI;IACb,aAAa,EAAE,MAAM;IACrB,qBAAqB,EAAE,gBAAe;IACtC,GAAG,EAAE,IAAI",
 "sources": ["Gallery.module.scss"],
 "names": [],
 "file": "Gallery.module.css"

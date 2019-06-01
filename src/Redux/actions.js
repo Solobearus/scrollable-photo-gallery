@@ -4,7 +4,6 @@ import * as asyncAction from './asyncActions'
 // config
  
 const key = "dad52b05158f7066db96c26b647a4831";
-const search = "red panda";
 
 // action types
 
@@ -16,9 +15,11 @@ export const PREV_PHOTO = 'PREV_PHOTO'
 
 // action creators
 
-export function fetchPhotos(page) {
+export function fetchPhotos(payload) {
+    console.log("payload",payload);
+    
     return dispatch => {
-        asyncAction.fetchPhotosAsync(key, page, search, dispatch)
+        asyncAction.fetchPhotosAsync(key, payload.page, payload.tags, dispatch)
     }
 };
 
